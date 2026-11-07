@@ -1,5 +1,9 @@
-# Ripple
+# Ripple - Coming soon!
 Motion detection from your existing Zigbee devices.
+
+
+
+https://github.com/user-attachments/assets/bd2e8076-61fb-47bc-91c2-4b365c0fa2b7
 
 
 ## In one sentence
@@ -146,6 +150,6 @@ It needs no camera, no PIR, no mmWave and no extra hardware, except your existin
 - What is different in Ripple:
   - it runs **inside the Zigbee device firmware**, on the TLSR8258, with no hub-side model;
   - it uses only RSSI, with integer math;
-  - any Zigbee device on the network that transmits can be a sender; our our firmware also send adjustable beacons.
+  - any Zigbee device on the network that transmits can be a sender; our firmware also send adjustable beacons.
 
 ---
