@@ -1,2 +1,2 @@
 # Ripple
-Ripple: motion detection from your existing Zigbee devices.
+Motion detection from your existing Zigbee devices.
