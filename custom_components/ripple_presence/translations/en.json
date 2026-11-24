@@ -1,0 +1,278 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Set up Ripple",
+        "description": "Ripple finds Zigbee devices with the Ripple sensing firmware and turns them into room presence sensors.\nChoose the Zigbee system that runs your devices.",
+        "data": {
+          "stack": "Zigbee system"
+        }
+      },
+      "z2m": {
+        "title": "Zigbee2MQTT",
+        "description": "Ripple talks to Zigbee2MQTT through the MQTT integration of Home Assistant.\nUse the base topic set in Zigbee2MQTT.",
+        "data": {
+          "base_topic": "Base topic"
+        },
+        "data_description": {
+          "base_topic": "The default is zigbee2mqtt."
+        }
+      },
+      "settings": {
+        "title": "Set up Ripple",
+        "description": "Start read-only to check what Ripple finds before it changes anything.",
+        "data": {
+          "allow_writes": "Allow writes to devices",
+          "protected_devices": "Protected devices"
+        },
+        "data_description": {
+          "allow_writes": "Off keeps Ripple read-only: it reads the devices and keeps your changes without sending them.\nOn sends settings, links and calibration to the devices.",
+          "protected_devices": "Ripple never reads or writes these devices, for example a relay that drives an alarm."
+        }
+      }
+    },
+    "abort": {
+      "no_zigbee": "Ripple needs Zigbee Home Automation (ZHA) or Zigbee2MQTT with the MQTT integration.\nSet one of them up and pair your devices first.",
+      "single_instance_allowed": "Ripple is already set up."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Ripple",
+        "menu_options": {
+          "settings": "Settings",
+          "links": "Links of a device",
+          "rooms": "Rooms"
+        }
+      },
+      "settings": {
+        "title": "Settings",
+        "data": {
+          "allow_writes": "Allow writes to devices",
+          "protected_devices": "Protected devices",
+          "poll_interval_s": "Status poll interval",
+          "resync_minutes": "Resync interval"
+        },
+        "data_description": {
+          "allow_writes": "Off keeps Ripple read-only: it reads the devices and keeps your changes without sending them.\nOn sends settings, links and calibration to the devices.",
+          "protected_devices": "Ripple never reads or writes these devices, for example a relay that drives an alarm.",
+          "poll_interval_s": "How often Ripple reads the calibration and link status of each device.\nMotion arrives as events and does not wait for this.",
+          "resync_minutes": "How often Ripple checks that the devices still hold its settings.\nUsed only when writes are allowed."
+        }
+      },
+      "links": {
+        "title": "Links of a device",
+        "description": "Pick the device whose links you want to change.",
+        "data": {
+          "switch": "Device"
+        }
+      },
+      "links_edit": {
+        "title": "Links of {device}",
+        "description": "{device} detects presence on the radio path to each device you pick here.\nPick devices whose path crosses the room.\nAt most {max}.\nCalibrate the room afterwards.",
+        "data": {
+          "sources": "Devices to listen to"
+        }
+      },
+      "rooms": {
+        "title": "Rooms",
+        "description": "Each Home Assistant area with a Ripple device is a room automatically.\nAdd a room here for devices that work together across areas, or for a device that serves two rooms.",
+        "data": {
+          "room": "Room"
+        }
+      },
+      "room_edit": {
+        "title": "Room",
+        "data": {
+          "name": "Name",
+          "switches": "Devices",
+          "remove": "Remove this room"
+        }
+      }
+    },
+    "error": {
+      "too_many": "A device listens to at most 10 devices.",
+      "name_required": "Enter a name for the room."
+    },
+    "abort": {
+      "no_switches": "No Ripple device has been found yet."
+    }
+  },
+  "issues": {
+    "read_only_pending": {
+      "title": "Ripple changes not sent",
+      "description": "Ripple is read-only and {count} devices have changes that were saved but not sent.\nTo send them, open Ripple, Configure, Settings, and turn on \"Allow writes to devices\"."
+    },
+    "quirk_not_applied": {
+      "title": "Ripple devices loaded without the Ripple quirk",
+      "description": "Ripple found {count} devices with Ripple firmware that ZHA loaded without the Ripple quirk, or with an older one: {names}.\nZHA loads the quirk file ripple_quirks.py from its custom_quirks_path when Home Assistant starts.\nRestart Home Assistant to apply it.\nRipple does not reload ZHA."
+    },
+    "quirk_broken": {
+      "title": "Ripple quirk file could not be written",
+      "description": "Ripple found {count} devices with Ripple firmware that ZHA loaded without the Ripple quirk: {names}.\nRipple could not write ripple_quirks.py into the ZHA custom_quirks_path, see the Home Assistant log."
+    },
+    "quirk_duplicate": {
+      "title": "Another quirk file for the Ripple devices",
+      "description": "ZHA also loads a quirk for the same device models from: {files}.\nTwo quirks for one model make ZHA pick one of them.\nRemove or rename that file, then restart Home Assistant.\nRipple does not delete it."
+    },
+    "quirk_no_path": {
+      "title": "ZHA has no custom_quirks_path",
+      "description": "Ripple gives ZHA its quirk as a file, ripple_quirks.py, in the ZHA custom_quirks_path, and ZHA loads it when it starts.\nAdd to configuration.yaml:\n\nzha:\n  custom_quirks_path: /config/custom_zha_quirks/\n\nthen restart Home Assistant.\nRipple never changes ZHA itself."
+    },
+    "quirk_restart": {
+      "title": "Restart Home Assistant to load the Ripple quirk",
+      "description": "Ripple wrote a new version of its ZHA quirk to {file}.\nZHA loads it at the next Home Assistant start."
+    },
+    "z2m_converter": {
+      "title": "Ripple converter not installed in Zigbee2MQTT",
+      "description": "Zigbee2MQTT did not accept the Ripple external converter: {error}\nCheck that Zigbee2MQTT runs, that its base topic matches the Ripple setup, and look at the Zigbee2MQTT log."
+    }
+  },
+  "exceptions": {
+    "writes_disabled": {
+      "message": "Ripple is read-only.\nTurn on \"Allow writes to devices\" in the Ripple settings to calibrate."
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "occupancy": {
+        "name": "Motion"
+      },
+      "motion": {
+        "name": "Ripple motion"
+      }
+    },
+    "button": {
+      "calibrate": {
+        "name": "Calibrate"
+      }
+    },
+    "select": {
+      "trigger_mode": {
+        "name": "Room trigger",
+        "state": {
+          "any": "Any line",
+          "all": "All lines",
+          "custom": "Custom number of lines"
+        }
+      }
+    },
+    "number": {
+      "off_s": {
+        "name": "Turn off after leaving"
+      },
+      "trigger_k": {
+        "name": "Lines needed to trigger"
+      },
+      "beacon_hz": {
+        "name": "Beacons per second"
+      },
+      "cal_s": {
+        "name": "Calibration duration"
+      },
+      "adv_gate_age_ds": {
+        "name": "Movement stays valid for"
+      },
+      "adv_gate_gap_ds": {
+        "name": "Forget packets after a gap of"
+      },
+      "adv_core_pct": {
+        "name": "Share for the empty-room level"
+      },
+      "adv_cal_min_rate": {
+        "name": "Calibrate: minimum capture rate above sensitivity 49"
+      },
+      "adv_blk_s": {
+        "name": "Averaging block length"
+      },
+      "adv_blk_thr_q": {
+        "name": "Block change counted as movement"
+      },
+      "adv_hist_cap": {
+        "name": "Calibration memory"
+      },
+      "adv_b_minc": {
+        "name": "Calibration noise allowance"
+      },
+      "adv_cal_margin": {
+        "name": "Calibration margin"
+      },
+      "adv_rate_state_d": {
+        "name": "Minimum packet rate, sender relay state known"
+      },
+      "adv_rate_nostate_d": {
+        "name": "Minimum packet rate, sender relay state unknown"
+      },
+      "adv_level_min": {
+        "name": "Weakest signal used"
+      },
+      "adv_relay_skip_ds": {
+        "name": "Ignore packets around a relay switch"
+      },
+      "adv_report_repeats": {
+        "name": "Resends of a change"
+      },
+      "adv_alive_s": {
+        "name": "A silent line stops voting after"
+      },
+      "adv_heartbeat_min": {
+        "name": "Resend the state at least every"
+      },
+      "adv_report_repeat_ms": {
+        "name": "Pause between resends"
+      },
+      "adv_quiet_q": {
+        "name": "Quiet block"
+      },
+      "adv_off_res_db": {
+        "name": "Largest learned correction"
+      },
+      "adv_off_max_db": {
+        "name": "Largest relay effect"
+      }
+    },
+    "switch": {
+      "detect": {
+        "name": "Detection"
+      },
+      "raw_stream": {
+        "name": "Raw signal stream (diagnostics)"
+      },
+      "self_tune": {
+        "name": "Self-tuning (24 h)"
+      }
+    },
+    "sensor": {
+      "calibration": {
+        "name": "Calibration",
+        "state": {
+          "calibrated": "Calibrated",
+          "needs_calibration": "Needs calibration",
+          "calibrating": "Calibrating",
+          "refused": "Refused, someone moved"
+        }
+      },
+      "cal_left": {
+        "name": "Calibration time left"
+      },
+      "active_links": {
+        "name": "Active links"
+      },
+      "pending": {
+        "name": "Changes not sent"
+      },
+      "stack_used": {
+        "name": "Stack used"
+      }
+    }
+  },
+  "selector": {
+    "stack": {
+      "options": {
+        "zha": "Zigbee Home Automation (ZHA)",
+        "z2m": "Zigbee2MQTT"
+      }
+    }
+  }
+}

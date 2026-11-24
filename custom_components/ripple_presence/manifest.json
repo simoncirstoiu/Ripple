@@ -1,0 +1,23 @@
+{
+  "domain": "ripple_presence",
+  "name": "Ripple",
+  "codeowners": ["@simoncirstoiu"],
+  "config_flow": true,
+  "dependencies": [
+    "http",
+    "frontend",
+    "panel_custom",
+    "websocket_api"
+  ],
+  "after_dependencies": [
+    "mqtt",
+    "zha"
+  ],
+  "documentation": "https://github.com/simoncirstoiu/Ripple",
+  "integration_type": "service",
+  "iot_class": "local_polling",
+  "issue_tracker": "https://github.com/simoncirstoiu/Ripple/issues",
+  "requirements": [],
+  "single_config_entry": true,
+  "version": "1.0.39"
+}

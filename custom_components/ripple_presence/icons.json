@@ -1,0 +1,39 @@
+{
+  "entity": {
+    "number": {
+      "off_s": {
+        "default": "mdi:timer-off-outline"
+      },
+      "beacon_hz": {
+        "default": "mdi:access-point"
+      },
+      "cal_s": {
+        "default": "mdi:timer-cog-outline"
+      }
+    },
+    "button": {
+      "calibrate": {
+        "default": "mdi:target"
+      }
+    },
+    "switch": {
+      "detect": {
+        "default": "mdi:motion-sensor"
+      },
+      "raw_stream": {
+        "default": "mdi:waveform"
+      }
+    },
+    "sensor": {
+      "calibration": {
+        "default": "mdi:target"
+      },
+      "active_links": {
+        "default": "mdi:link-variant"
+      },
+      "pending": {
+        "default": "mdi:progress-clock"
+      }
+    }
+  }
+}

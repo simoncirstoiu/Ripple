@@ -1,0 +1,560 @@
+{
+ "meta": {
+  "source": "synthetic-empty"
+ },
+ "endpoints": {
+  "0c:43:14:ff:fe:10:20:01": [
+   {
+    "ep": 1,
+    "onoff_in": false,
+    "onoff_out": true,
+    "name": "Button 1",
+    "entity_id": null
+   },
+   {
+    "ep": 2,
+    "onoff_in": false,
+    "onoff_out": true,
+    "name": "Button 2",
+    "entity_id": null
+   },
+   {
+    "ep": 3,
+    "onoff_in": true,
+    "onoff_out": false,
+    "name": "Kitchen switch relay 1",
+    "entity_id": "switch.kitchen_switch_1"
+   },
+   {
+    "ep": 4,
+    "onoff_in": true,
+    "onoff_out": false,
+    "name": "Kitchen switch relay 2",
+    "entity_id": "switch.kitchen_switch_2"
+   }
+  ],
+  "0c:43:14:ff:fe:10:20:02": [
+   {
+    "ep": 1,
+    "onoff_in": false,
+    "onoff_out": true,
+    "name": "Button 1",
+    "entity_id": null
+   },
+   {
+    "ep": 2,
+    "onoff_in": true,
+    "onoff_out": false,
+    "name": "Kitchen worktop switch relay 1",
+    "entity_id": "switch.kitchen_worktop_switch_1"
+   }
+  ],
+  "0c:43:14:ff:fe:10:20:03": [
+   {
+    "ep": 1,
+    "onoff_in": false,
+    "onoff_out": true,
+    "name": "Button 1",
+    "entity_id": null
+   },
+   {
+    "ep": 2,
+    "onoff_in": true,
+    "onoff_out": false,
+    "name": "Hallway switch relay 1",
+    "entity_id": "switch.hallway_switch_1"
+   }
+  ],
+  "0c:43:14:ff:fe:10:20:04": [
+   {
+    "ep": 1,
+    "onoff_in": false,
+    "onoff_out": true,
+    "name": "Button 1",
+    "entity_id": null
+   },
+   {
+    "ep": 2,
+    "onoff_in": false,
+    "onoff_out": true,
+    "name": "Button 2",
+    "entity_id": null
+   },
+   {
+    "ep": 3,
+    "onoff_in": false,
+    "onoff_out": true,
+    "name": "Button 3",
+    "entity_id": null
+   },
+   {
+    "ep": 4,
+    "onoff_in": true,
+    "onoff_out": false,
+    "name": "Stairs switch relay 1",
+    "entity_id": "switch.stairs_switch_1"
+   },
+   {
+    "ep": 5,
+    "onoff_in": true,
+    "onoff_out": false,
+    "name": "Stairs switch relay 2",
+    "entity_id": "switch.stairs_switch_2"
+   },
+   {
+    "ep": 6,
+    "onoff_in": true,
+    "onoff_out": false,
+    "name": "Stairs switch relay 3",
+    "entity_id": "switch.stairs_switch_3"
+   }
+  ],
+  "0c:43:14:ff:fe:10:20:05": [
+   {
+    "ep": 1,
+    "onoff_in": false,
+    "onoff_out": true,
+    "name": "Button 1",
+    "entity_id": null
+   },
+   {
+    "ep": 2,
+    "onoff_in": false,
+    "onoff_out": true,
+    "name": "Button 2",
+    "entity_id": null
+   },
+   {
+    "ep": 3,
+    "onoff_in": false,
+    "onoff_out": true,
+    "name": "Button 3",
+    "entity_id": null
+   },
+   {
+    "ep": 4,
+    "onoff_in": true,
+    "onoff_out": false,
+    "name": "Living room switch relay 1",
+    "entity_id": "switch.living_room_switch_1"
+   },
+   {
+    "ep": 5,
+    "onoff_in": true,
+    "onoff_out": false,
+    "name": "Living room switch relay 2",
+    "entity_id": "switch.living_room_switch_2"
+   },
+   {
+    "ep": 6,
+    "onoff_in": true,
+    "onoff_out": false,
+    "name": "Living room switch relay 3",
+    "entity_id": "switch.living_room_switch_3"
+   }
+  ],
+  "0c:43:14:ff:fe:10:20:06": [
+   {
+    "ep": 1,
+    "onoff_in": false,
+    "onoff_out": true,
+    "name": "Button 1",
+    "entity_id": null
+   },
+   {
+    "ep": 2,
+    "onoff_in": false,
+    "onoff_out": true,
+    "name": "Button 2",
+    "entity_id": null
+   },
+   {
+    "ep": 3,
+    "onoff_in": true,
+    "onoff_out": false,
+    "name": "Office switch relay 1",
+    "entity_id": "switch.office_switch_1"
+   },
+   {
+    "ep": 4,
+    "onoff_in": true,
+    "onoff_out": false,
+    "name": "Office switch relay 2",
+    "entity_id": "switch.office_switch_2"
+   }
+  ],
+  "0c:43:14:ff:fe:10:20:07": [
+   {
+    "ep": 1,
+    "onoff_in": false,
+    "onoff_out": true,
+    "name": "Button 1",
+    "entity_id": null
+   },
+   {
+    "ep": 2,
+    "onoff_in": true,
+    "onoff_out": false,
+    "name": "Garage switch relay 1",
+    "entity_id": "switch.garage_switch_1"
+   }
+  ],
+  "0c:43:14:ff:fe:10:20:08": [
+   {
+    "ep": 1,
+    "onoff_in": true,
+    "onoff_out": false,
+    "name": "Tuya relay",
+    "entity_id": "switch.tuya_relay"
+   }
+  ],
+  "0c:43:14:ff:fe:10:20:09": [
+   {
+    "ep": 1,
+    "onoff_in": true,
+    "onoff_out": false,
+    "name": "Coffee machine plug",
+    "entity_id": "switch.coffee_machine_plug"
+   }
+  ],
+  "0c:43:14:ff:fe:10:20:0a": [
+   {
+    "ep": 1,
+    "onoff_in": true,
+    "onoff_out": false,
+    "name": "TV plug",
+    "entity_id": "switch.tv_plug"
+   }
+  ],
+  "0c:43:14:ff:fe:10:20:0b": [
+   {
+    "ep": 1,
+    "onoff_in": true,
+    "onoff_out": false,
+    "name": "Desk lamp",
+    "entity_id": "switch.desk_lamp"
+   }
+  ]
+ },
+ "firmware": [
+  {
+   "ieee": "0c:43:14:ff:fe:10:20:01",
+   "sw_version": "0x1103339c",
+   "image_type": 47149,
+   "update_entity": "update.kitchen_switch_firmware",
+   "state": "off",
+   "installed": "0x1103339c",
+   "latest": "0x1103339c",
+   "in_progress": false
+  },
+  {
+   "ieee": "0c:43:14:ff:fe:10:20:02",
+   "sw_version": "0x1103339c",
+   "image_type": 47149,
+   "update_entity": "update.kitchen_worktop_switch_firmware",
+   "state": "off",
+   "installed": "0x1103339c",
+   "latest": "0x1103339c",
+   "in_progress": false
+  },
+  {
+   "ieee": "0c:43:14:ff:fe:10:20:03",
+   "sw_version": "0x1103339c",
+   "image_type": 47149,
+   "update_entity": "update.hallway_switch_firmware",
+   "state": "off",
+   "installed": "0x1103339c",
+   "latest": "0x1103339c",
+   "in_progress": false
+  },
+  {
+   "ieee": "0c:43:14:ff:fe:10:20:04",
+   "sw_version": "0x1103339c",
+   "image_type": 47149,
+   "update_entity": "update.stairs_switch_firmware",
+   "state": "off",
+   "installed": "0x1103339c",
+   "latest": "0x1103339c",
+   "in_progress": false
+  },
+  {
+   "ieee": "0c:43:14:ff:fe:10:20:05",
+   "sw_version": "0x1103339c",
+   "image_type": 47149,
+   "update_entity": "update.living_room_switch_firmware",
+   "state": "off",
+   "installed": "0x1103339c",
+   "latest": "0x1103339c",
+   "in_progress": false
+  },
+  {
+   "ieee": "0c:43:14:ff:fe:10:20:06",
+   "sw_version": "0x1103300a",
+   "image_type": 47149,
+   "update_entity": "update.office_switch_firmware",
+   "state": "on",
+   "installed": "0x1103300a",
+   "latest": "0x1103339c",
+   "in_progress": false
+  },
+  {
+   "ieee": "0c:43:14:ff:fe:10:20:07",
+   "sw_version": "0x1103339c",
+   "image_type": 47149,
+   "update_entity": "update.garage_switch_firmware",
+   "state": "off",
+   "installed": "0x1103339c",
+   "latest": "0x1103339c",
+   "in_progress": false
+  },
+  {
+   "ieee": "0c:43:14:ff:fe:10:20:08",
+   "sw_version": "0x00000040",
+   "image_type": null,
+   "update_entity": "update.tuya_relay_firmware",
+   "state": "off",
+   "installed": "0x00000040",
+   "latest": "0x00000040",
+   "in_progress": false
+  },
+  {
+   "ieee": "0c:43:14:ff:fe:10:20:09",
+   "sw_version": "1.0.4",
+   "image_type": null,
+   "update_entity": "update.coffee_machine_plug_firmware",
+   "state": "off",
+   "installed": "1.0.4",
+   "latest": "1.0.4",
+   "in_progress": false
+  },
+  {
+   "ieee": "0c:43:14:ff:fe:10:20:0a",
+   "sw_version": "1.0.4",
+   "image_type": null,
+   "update_entity": "update.tv_plug_firmware",
+   "state": "off",
+   "installed": "1.0.4",
+   "latest": "1.0.4",
+   "in_progress": false
+  },
+  {
+   "ieee": "0c:43:14:ff:fe:10:20:0b",
+   "sw_version": "2.3",
+   "image_type": null,
+   "update_entity": "update.desk_lamp_firmware",
+   "state": "off",
+   "installed": "2.3",
+   "latest": "2.3",
+   "in_progress": false
+  }
+ ],
+ "binds": {
+  "0c:43:14:ff:fe:10:20:04": {
+   "replies": [
+    [
+     0,
+     2,
+     0,
+     [
+      {
+       "SrcEndpoint": 2,
+       "ClusterId": 6,
+       "DstAddress": {
+        "addrmode": 3,
+        "nwk": null,
+        "ieee": [
+         5,
+         32,
+         16,
+         254,
+         255,
+         20,
+         67,
+         12
+        ],
+        "endpoint": 4
+       }
+      },
+      {
+       "SrcEndpoint": 1,
+       "ClusterId": 6,
+       "DstAddress": {
+        "addrmode": 3,
+        "nwk": null,
+        "ieee": [
+         1,
+         0,
+         0,
+         0,
+         0,
+         0,
+         0,
+         0
+        ],
+        "endpoint": 1
+       }
+      }
+     ]
+    ]
+   ]
+  },
+  "0c:43:14:ff:fe:10:20:05": {
+   "replies": [
+    [
+     0,
+     1,
+     0,
+     [
+      {
+       "SrcEndpoint": 1,
+       "ClusterId": 6,
+       "DstAddress": {
+        "addrmode": 3,
+        "nwk": null,
+        "ieee": [
+         4,
+         32,
+         16,
+         254,
+         255,
+         20,
+         67,
+         12
+        ],
+        "endpoint": 5
+       }
+      }
+     ]
+    ]
+   ]
+  }
+ },
+ "services": {
+  "zha": [
+   "permit",
+   "set_zigbee_cluster_attribute"
+  ]
+ },
+ "zha_devices": [
+  {
+   "ieee": "00:00:00:00:00:00:00:01",
+   "nwk": 0,
+   "manufacturer": "Example",
+   "model": "Coordinator stick",
+   "name": "Coordinator",
+   "user_given_name": null,
+   "area_id": null,
+   "device_reg_id": "dev00",
+   "available": true,
+   "device_type": "Coordinator",
+   "power_source": "Mains",
+   "lqi": 255,
+   "rssi": 0,
+   "last_seen": "2026-01-01T12:00:00",
+   "neighbors": []
+  }
+ ],
+ "areas": [
+  {
+   "area_id": "kitchen",
+   "name": "Kitchen"
+  },
+  {
+   "area_id": "hallway",
+   "name": "Hallway"
+  },
+  {
+   "area_id": "living_room",
+   "name": "Living room"
+  },
+  {
+   "area_id": "office",
+   "name": "Office"
+  },
+  {
+   "area_id": "garage",
+   "name": "Garage"
+  }
+ ],
+ "device_registry": [
+  {
+   "id": "dev01",
+   "sw_version": "0x1103339c",
+   "name_by_user": null,
+   "area_id": "kitchen"
+  },
+  {
+   "id": "dev02",
+   "sw_version": "0x1103339c",
+   "name_by_user": null,
+   "area_id": "kitchen"
+  },
+  {
+   "id": "dev03",
+   "sw_version": "0x1103339c",
+   "name_by_user": null,
+   "area_id": "hallway"
+  },
+  {
+   "id": "dev04",
+   "sw_version": "0x1103339c",
+   "name_by_user": null,
+   "area_id": "hallway"
+  },
+  {
+   "id": "dev05",
+   "sw_version": "0x1103339c",
+   "name_by_user": null,
+   "area_id": "living_room"
+  },
+  {
+   "id": "dev06",
+   "sw_version": "0x1103300a",
+   "name_by_user": null,
+   "area_id": "office"
+  },
+  {
+   "id": "dev07",
+   "sw_version": "0x1103339c",
+   "name_by_user": null,
+   "area_id": "garage"
+  },
+  {
+   "id": "dev08",
+   "sw_version": "0x00000040",
+   "name_by_user": null,
+   "area_id": "garage"
+  },
+  {
+   "id": "dev09",
+   "sw_version": "1.0.4",
+   "name_by_user": null,
+   "area_id": "kitchen"
+  },
+  {
+   "id": "dev10",
+   "sw_version": "1.0.4",
+   "name_by_user": null,
+   "area_id": "living_room"
+  },
+  {
+   "id": "dev11",
+   "sw_version": "2.3",
+   "name_by_user": null,
+   "area_id": "office"
+  },
+  {
+   "id": "dev12",
+   "sw_version": "7",
+   "name_by_user": null,
+   "area_id": "hallway"
+  },
+  {
+   "id": "dev13",
+   "sw_version": "3",
+   "name_by_user": null,
+   "area_id": "hallway"
+  }
+ ],
+ "state": {}
+}

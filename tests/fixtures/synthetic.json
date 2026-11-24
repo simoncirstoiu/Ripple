@@ -1,0 +1,1081 @@
+{
+ "meta": {
+  "source": "synthetic",
+  "ha_version": "2026.10.0"
+ },
+ "endpoints": {
+  "0c:43:14:ff:fe:10:20:01": [
+   {
+    "ep": 1,
+    "onoff_in": false,
+    "onoff_out": true,
+    "name": "Button 1",
+    "entity_id": null
+   },
+   {
+    "ep": 2,
+    "onoff_in": false,
+    "onoff_out": true,
+    "name": "Button 2",
+    "entity_id": null
+   },
+   {
+    "ep": 3,
+    "onoff_in": true,
+    "onoff_out": false,
+    "name": "Kitchen switch relay 1",
+    "entity_id": "switch.kitchen_switch_1"
+   },
+   {
+    "ep": 4,
+    "onoff_in": true,
+    "onoff_out": false,
+    "name": "Kitchen switch relay 2",
+    "entity_id": "switch.kitchen_switch_2"
+   }
+  ],
+  "0c:43:14:ff:fe:10:20:02": [
+   {
+    "ep": 1,
+    "onoff_in": false,
+    "onoff_out": true,
+    "name": "Button 1",
+    "entity_id": null
+   },
+   {
+    "ep": 2,
+    "onoff_in": true,
+    "onoff_out": false,
+    "name": "Kitchen worktop switch relay 1",
+    "entity_id": "switch.kitchen_worktop_switch_1"
+   }
+  ],
+  "0c:43:14:ff:fe:10:20:03": [
+   {
+    "ep": 1,
+    "onoff_in": false,
+    "onoff_out": true,
+    "name": "Button 1",
+    "entity_id": null
+   },
+   {
+    "ep": 2,
+    "onoff_in": true,
+    "onoff_out": false,
+    "name": "Hallway switch relay 1",
+    "entity_id": "switch.hallway_switch_1"
+   }
+  ],
+  "0c:43:14:ff:fe:10:20:04": [
+   {
+    "ep": 1,
+    "onoff_in": false,
+    "onoff_out": true,
+    "name": "Button 1",
+    "entity_id": null
+   },
+   {
+    "ep": 2,
+    "onoff_in": false,
+    "onoff_out": true,
+    "name": "Button 2",
+    "entity_id": null
+   },
+   {
+    "ep": 3,
+    "onoff_in": false,
+    "onoff_out": true,
+    "name": "Button 3",
+    "entity_id": null
+   },
+   {
+    "ep": 4,
+    "onoff_in": true,
+    "onoff_out": false,
+    "name": "Stairs switch relay 1",
+    "entity_id": "switch.stairs_switch_1"
+   },
+   {
+    "ep": 5,
+    "onoff_in": true,
+    "onoff_out": false,
+    "name": "Stairs switch relay 2",
+    "entity_id": "switch.stairs_switch_2"
+   },
+   {
+    "ep": 6,
+    "onoff_in": true,
+    "onoff_out": false,
+    "name": "Stairs switch relay 3",
+    "entity_id": "switch.stairs_switch_3"
+   }
+  ],
+  "0c:43:14:ff:fe:10:20:05": [
+   {
+    "ep": 1,
+    "onoff_in": false,
+    "onoff_out": true,
+    "name": "Button 1",
+    "entity_id": null
+   },
+   {
+    "ep": 2,
+    "onoff_in": false,
+    "onoff_out": true,
+    "name": "Button 2",
+    "entity_id": null
+   },
+   {
+    "ep": 3,
+    "onoff_in": false,
+    "onoff_out": true,
+    "name": "Button 3",
+    "entity_id": null
+   },
+   {
+    "ep": 4,
+    "onoff_in": true,
+    "onoff_out": false,
+    "name": "Living room switch relay 1",
+    "entity_id": "switch.living_room_switch_1"
+   },
+   {
+    "ep": 5,
+    "onoff_in": true,
+    "onoff_out": false,
+    "name": "Living room switch relay 2",
+    "entity_id": "switch.living_room_switch_2"
+   },
+   {
+    "ep": 6,
+    "onoff_in": true,
+    "onoff_out": false,
+    "name": "Living room switch relay 3",
+    "entity_id": "switch.living_room_switch_3"
+   }
+  ],
+  "0c:43:14:ff:fe:10:20:06": [
+   {
+    "ep": 1,
+    "onoff_in": false,
+    "onoff_out": true,
+    "name": "Button 1",
+    "entity_id": null
+   },
+   {
+    "ep": 2,
+    "onoff_in": false,
+    "onoff_out": true,
+    "name": "Button 2",
+    "entity_id": null
+   },
+   {
+    "ep": 3,
+    "onoff_in": true,
+    "onoff_out": false,
+    "name": "Office switch relay 1",
+    "entity_id": "switch.office_switch_1"
+   },
+   {
+    "ep": 4,
+    "onoff_in": true,
+    "onoff_out": false,
+    "name": "Office switch relay 2",
+    "entity_id": "switch.office_switch_2"
+   }
+  ],
+  "0c:43:14:ff:fe:10:20:07": [
+   {
+    "ep": 1,
+    "onoff_in": false,
+    "onoff_out": true,
+    "name": "Button 1",
+    "entity_id": null
+   },
+   {
+    "ep": 2,
+    "onoff_in": true,
+    "onoff_out": false,
+    "name": "Garage switch relay 1",
+    "entity_id": "switch.garage_switch_1"
+   }
+  ],
+  "0c:43:14:ff:fe:10:20:08": [
+   {
+    "ep": 1,
+    "onoff_in": true,
+    "onoff_out": false,
+    "name": "Tuya relay",
+    "entity_id": "switch.tuya_relay"
+   }
+  ],
+  "0c:43:14:ff:fe:10:20:09": [
+   {
+    "ep": 1,
+    "onoff_in": true,
+    "onoff_out": false,
+    "name": "Coffee machine plug",
+    "entity_id": "switch.coffee_machine_plug"
+   }
+  ],
+  "0c:43:14:ff:fe:10:20:0a": [
+   {
+    "ep": 1,
+    "onoff_in": true,
+    "onoff_out": false,
+    "name": "TV plug",
+    "entity_id": "switch.tv_plug"
+   }
+  ],
+  "0c:43:14:ff:fe:10:20:0b": [
+   {
+    "ep": 1,
+    "onoff_in": true,
+    "onoff_out": false,
+    "name": "Desk lamp",
+    "entity_id": "switch.desk_lamp"
+   }
+  ]
+ },
+ "firmware": [
+  {
+   "ieee": "0c:43:14:ff:fe:10:20:01",
+   "sw_version": "0x1103339c",
+   "image_type": 47149,
+   "update_entity": "update.kitchen_switch_firmware",
+   "state": "off",
+   "installed": "0x1103339c",
+   "latest": "0x1103339c",
+   "in_progress": false
+  },
+  {
+   "ieee": "0c:43:14:ff:fe:10:20:02",
+   "sw_version": "0x1103339c",
+   "image_type": 47149,
+   "update_entity": "update.kitchen_worktop_switch_firmware",
+   "state": "off",
+   "installed": "0x1103339c",
+   "latest": "0x1103339c",
+   "in_progress": false
+  },
+  {
+   "ieee": "0c:43:14:ff:fe:10:20:03",
+   "sw_version": "0x1103339c",
+   "image_type": 47149,
+   "update_entity": "update.hallway_switch_firmware",
+   "state": "off",
+   "installed": "0x1103339c",
+   "latest": "0x1103339c",
+   "in_progress": false
+  },
+  {
+   "ieee": "0c:43:14:ff:fe:10:20:04",
+   "sw_version": "0x1103339c",
+   "image_type": 47149,
+   "update_entity": "update.stairs_switch_firmware",
+   "state": "off",
+   "installed": "0x1103339c",
+   "latest": "0x1103339c",
+   "in_progress": false
+  },
+  {
+   "ieee": "0c:43:14:ff:fe:10:20:05",
+   "sw_version": "0x1103339c",
+   "image_type": 47149,
+   "update_entity": "update.living_room_switch_firmware",
+   "state": "off",
+   "installed": "0x1103339c",
+   "latest": "0x1103339c",
+   "in_progress": false
+  },
+  {
+   "ieee": "0c:43:14:ff:fe:10:20:06",
+   "sw_version": "0x1103300a",
+   "image_type": 47149,
+   "update_entity": "update.office_switch_firmware",
+   "state": "on",
+   "installed": "0x1103300a",
+   "latest": "0x1103339c",
+   "in_progress": false
+  },
+  {
+   "ieee": "0c:43:14:ff:fe:10:20:07",
+   "sw_version": "0x1103339c",
+   "image_type": 47149,
+   "update_entity": "update.garage_switch_firmware",
+   "state": "off",
+   "installed": "0x1103339c",
+   "latest": "0x1103339c",
+   "in_progress": false
+  },
+  {
+   "ieee": "0c:43:14:ff:fe:10:20:08",
+   "sw_version": "0x00000040",
+   "image_type": null,
+   "update_entity": "update.tuya_relay_firmware",
+   "state": "off",
+   "installed": "0x00000040",
+   "latest": "0x00000040",
+   "in_progress": false
+  },
+  {
+   "ieee": "0c:43:14:ff:fe:10:20:09",
+   "sw_version": "1.0.4",
+   "image_type": null,
+   "update_entity": "update.coffee_machine_plug_firmware",
+   "state": "off",
+   "installed": "1.0.4",
+   "latest": "1.0.4",
+   "in_progress": false
+  },
+  {
+   "ieee": "0c:43:14:ff:fe:10:20:0a",
+   "sw_version": "1.0.4",
+   "image_type": null,
+   "update_entity": "update.tv_plug_firmware",
+   "state": "off",
+   "installed": "1.0.4",
+   "latest": "1.0.4",
+   "in_progress": false
+  },
+  {
+   "ieee": "0c:43:14:ff:fe:10:20:0b",
+   "sw_version": "2.3",
+   "image_type": null,
+   "update_entity": "update.desk_lamp_firmware",
+   "state": "off",
+   "installed": "2.3",
+   "latest": "2.3",
+   "in_progress": false
+  }
+ ],
+ "binds": {
+  "0c:43:14:ff:fe:10:20:04": {
+   "replies": [
+    [
+     0,
+     2,
+     0,
+     [
+      {
+       "SrcEndpoint": 2,
+       "ClusterId": 6,
+       "DstAddress": {
+        "addrmode": 3,
+        "nwk": null,
+        "ieee": [
+         5,
+         32,
+         16,
+         254,
+         255,
+         20,
+         67,
+         12
+        ],
+        "endpoint": 4
+       }
+      },
+      {
+       "SrcEndpoint": 1,
+       "ClusterId": 6,
+       "DstAddress": {
+        "addrmode": 3,
+        "nwk": null,
+        "ieee": [
+         1,
+         0,
+         0,
+         0,
+         0,
+         0,
+         0,
+         0
+        ],
+        "endpoint": 1
+       }
+      }
+     ]
+    ]
+   ]
+  },
+  "0c:43:14:ff:fe:10:20:05": {
+   "replies": [
+    [
+     0,
+     1,
+     0,
+     [
+      {
+       "SrcEndpoint": 1,
+       "ClusterId": 6,
+       "DstAddress": {
+        "addrmode": 3,
+        "nwk": null,
+        "ieee": [
+         4,
+         32,
+         16,
+         254,
+         255,
+         20,
+         67,
+         12
+        ],
+        "endpoint": 5
+       }
+      }
+     ]
+    ]
+   ]
+  }
+ },
+ "services": {
+  "zha": [
+   "permit",
+   "set_zigbee_cluster_attribute"
+  ]
+ },
+ "zha_devices": [
+  {
+   "ieee": "0c:43:14:ff:fe:10:20:01",
+   "nwk": 4369,
+   "manufacturer": "abc12345",
+   "model": "TS0002-ABC-T",
+   "name": "abc12345 TS0002-ABC-T",
+   "user_given_name": "Kitchen switch",
+   "area_id": "kitchen",
+   "device_reg_id": "dev01",
+   "available": true,
+   "device_type": "Router",
+   "power_source": "Mains",
+   "lqi": 142,
+   "rssi": -59,
+   "last_seen": "2026-01-01T12:00:00",
+   "neighbors": [
+    {
+     "ieee": "0c:43:14:ff:fe:10:20:02",
+     "nwk": "0x1222",
+     "lqi": "92",
+     "relationship": "Sibling",
+     "device_type": "Router"
+    },
+    {
+     "ieee": "0c:43:14:ff:fe:10:20:09",
+     "nwk": "0x1999",
+     "lqi": "136",
+     "relationship": "Sibling",
+     "device_type": "Router"
+    },
+    {
+     "ieee": "0c:43:14:ff:fe:10:20:03",
+     "nwk": "0x1333",
+     "lqi": "91",
+     "relationship": "Sibling",
+     "device_type": "Router"
+    }
+   ],
+   "quirk_applied": true,
+   "sense": true,
+   "fw": 285422492,
+   "sw_build_id": null,
+   "has_onoff": true
+  },
+  {
+   "ieee": "0c:43:14:ff:fe:10:20:02",
+   "nwk": 4642,
+   "manufacturer": "xyz98765",
+   "model": "TS0001-XYZ-T",
+   "name": "xyz98765 TS0001-XYZ-T",
+   "user_given_name": "Kitchen worktop switch",
+   "area_id": "kitchen",
+   "device_reg_id": "dev02",
+   "available": true,
+   "device_type": "Router",
+   "power_source": "Mains",
+   "lqi": 161,
+   "rssi": -53,
+   "last_seen": "2026-01-01T12:00:00",
+   "neighbors": [
+    {
+     "ieee": "0c:43:14:ff:fe:10:20:01",
+     "nwk": "0x1111",
+     "lqi": "110",
+     "relationship": "Sibling",
+     "device_type": "Router"
+    },
+    {
+     "ieee": "0c:43:14:ff:fe:10:20:09",
+     "nwk": "0x1999",
+     "lqi": "226",
+     "relationship": "Sibling",
+     "device_type": "Router"
+    }
+   ],
+   "quirk_applied": true,
+   "sense": true,
+   "fw": 285422492,
+   "sw_build_id": null,
+   "has_onoff": true
+  },
+  {
+   "ieee": "0c:43:14:ff:fe:10:20:03",
+   "nwk": 4915,
+   "manufacturer": "xyz98765",
+   "model": "TS0001-XYZ-T",
+   "name": "xyz98765 TS0001-XYZ-T",
+   "user_given_name": "Hallway switch",
+   "area_id": "hallway",
+   "device_reg_id": "dev03",
+   "available": true,
+   "device_type": "Router",
+   "power_source": "Mains",
+   "lqi": 78,
+   "rssi": -84,
+   "last_seen": "2026-01-01T12:00:00",
+   "neighbors": [
+    {
+     "ieee": "0c:43:14:ff:fe:10:20:04",
+     "nwk": "0x1444",
+     "lqi": "243",
+     "relationship": "Sibling",
+     "device_type": "Router"
+    },
+    {
+     "ieee": "0c:43:14:ff:fe:10:20:0c",
+     "nwk": "0x1CCC",
+     "lqi": "128",
+     "relationship": "Sibling",
+     "device_type": "Router"
+    }
+   ],
+   "quirk_applied": true,
+   "sense": true,
+   "fw": 285422492,
+   "sw_build_id": null,
+   "has_onoff": true
+  },
+  {
+   "ieee": "0c:43:14:ff:fe:10:20:04",
+   "nwk": 5188,
+   "manufacturer": "qrs55555",
+   "model": "TS0003-QRS-T",
+   "name": "qrs55555 TS0003-QRS-T",
+   "user_given_name": "Stairs switch",
+   "area_id": "hallway",
+   "device_reg_id": "dev04",
+   "available": true,
+   "device_type": "Router",
+   "power_source": "Mains",
+   "lqi": 84,
+   "rssi": -73,
+   "last_seen": "2026-01-01T12:00:00",
+   "neighbors": [
+    {
+     "ieee": "0c:43:14:ff:fe:10:20:03",
+     "nwk": "0x1333",
+     "lqi": "207",
+     "relationship": "Sibling",
+     "device_type": "Router"
+    },
+    {
+     "ieee": "0c:43:14:ff:fe:10:20:05",
+     "nwk": "0x1555",
+     "lqi": "216",
+     "relationship": "Sibling",
+     "device_type": "Router"
+    },
+    {
+     "ieee": "0c:43:14:ff:fe:10:20:0a",
+     "nwk": "0x1AAA",
+     "lqi": "189",
+     "relationship": "Sibling",
+     "device_type": "Router"
+    }
+   ],
+   "quirk_applied": true,
+   "sense": true,
+   "fw": 285422492,
+   "sw_build_id": null,
+   "has_onoff": true
+  },
+  {
+   "ieee": "0c:43:14:ff:fe:10:20:05",
+   "nwk": 5461,
+   "manufacturer": "qrs55555",
+   "model": "TS0003-QRS-T",
+   "name": "qrs55555 TS0003-QRS-T",
+   "user_given_name": "Living room switch",
+   "area_id": "living_room",
+   "device_reg_id": "dev05",
+   "available": true,
+   "device_type": "Router",
+   "power_source": "Mains",
+   "lqi": 209,
+   "rssi": -53,
+   "last_seen": "2026-01-01T12:00:00",
+   "neighbors": [
+    {
+     "ieee": "0c:43:14:ff:fe:10:20:0a",
+     "nwk": "0x1AAA",
+     "lqi": "156",
+     "relationship": "Sibling",
+     "device_type": "Router"
+    },
+    {
+     "ieee": "0c:43:14:ff:fe:10:20:04",
+     "nwk": "0x1444",
+     "lqi": "143",
+     "relationship": "Sibling",
+     "device_type": "Router"
+    }
+   ],
+   "quirk_applied": true,
+   "sense": true,
+   "fw": 285422492,
+   "sw_build_id": null,
+   "has_onoff": true
+  },
+  {
+   "ieee": "0c:43:14:ff:fe:10:20:06",
+   "nwk": 5734,
+   "manufacturer": "abc12345",
+   "model": "TS0002-ABC-T",
+   "name": "abc12345 TS0002-ABC-T",
+   "user_given_name": "Office switch",
+   "area_id": "office",
+   "device_reg_id": "dev06",
+   "available": true,
+   "device_type": "Router",
+   "power_source": "Mains",
+   "lqi": 189,
+   "rssi": -63,
+   "last_seen": "2026-01-01T12:00:00",
+   "neighbors": [],
+   "quirk_applied": false,
+   "sense": false,
+   "fw": 285421578,
+   "sw_build_id": null,
+   "has_onoff": true
+  },
+  {
+   "ieee": "0c:43:14:ff:fe:10:20:07",
+   "nwk": 6007,
+   "manufacturer": "xyz98765",
+   "model": "TS0001-XYZ-T",
+   "name": "xyz98765 TS0001-XYZ-T",
+   "user_given_name": "Garage switch",
+   "area_id": "garage",
+   "device_reg_id": "dev07",
+   "available": false,
+   "device_type": "Router",
+   "power_source": "Mains",
+   "lqi": 69,
+   "rssi": -55,
+   "last_seen": "2026-01-01T12:00:00",
+   "neighbors": [],
+   "quirk_applied": true,
+   "sense": true,
+   "fw": 285422492,
+   "sw_build_id": null,
+   "has_onoff": true
+  },
+  {
+   "ieee": "0c:43:14:ff:fe:10:20:08",
+   "nwk": 6280,
+   "manufacturer": "_TZ3000_example",
+   "model": "TS0004",
+   "name": "_TZ3000_example TS0004",
+   "user_given_name": "Tuya relay",
+   "area_id": "garage",
+   "device_reg_id": "dev08",
+   "available": true,
+   "device_type": "Router",
+   "power_source": "Mains",
+   "lqi": 171,
+   "rssi": -76,
+   "last_seen": "2026-01-01T12:00:00",
+   "neighbors": [],
+   "quirk_applied": false,
+   "sense": false,
+   "fw": null,
+   "sw_build_id": null,
+   "has_onoff": true
+  },
+  {
+   "ieee": "0c:43:14:ff:fe:10:20:09",
+   "nwk": 6553,
+   "manufacturer": "Example Plugs",
+   "model": "SP 120",
+   "name": "Example Plugs SP 120",
+   "user_given_name": "Coffee machine plug",
+   "area_id": "kitchen",
+   "device_reg_id": "dev09",
+   "available": true,
+   "device_type": "Router",
+   "power_source": "Mains",
+   "lqi": 77,
+   "rssi": -65,
+   "last_seen": "2026-01-01T12:00:00",
+   "neighbors": [],
+   "quirk_applied": false,
+   "sense": false,
+   "fw": null,
+   "sw_build_id": null,
+   "has_onoff": true
+  },
+  {
+   "ieee": "0c:43:14:ff:fe:10:20:0a",
+   "nwk": 6826,
+   "manufacturer": "Example Plugs",
+   "model": "SP 120",
+   "name": "Example Plugs SP 120",
+   "user_given_name": "TV plug",
+   "area_id": "living_room",
+   "device_reg_id": "dev10",
+   "available": true,
+   "device_type": "Router",
+   "power_source": "Mains",
+   "lqi": 83,
+   "rssi": -85,
+   "last_seen": "2026-01-01T12:00:00",
+   "neighbors": [],
+   "quirk_applied": false,
+   "sense": false,
+   "fw": null,
+   "sw_build_id": null,
+   "has_onoff": true
+  },
+  {
+   "ieee": "0c:43:14:ff:fe:10:20:0b",
+   "nwk": 7099,
+   "manufacturer": "Example Lights",
+   "model": "LED bulb E27",
+   "name": "Example Lights LED bulb E27",
+   "user_given_name": "Desk lamp",
+   "area_id": "office",
+   "device_reg_id": "dev11",
+   "available": true,
+   "device_type": "Router",
+   "power_source": "Mains",
+   "lqi": 168,
+   "rssi": -53,
+   "last_seen": "2026-01-01T12:00:00",
+   "neighbors": [],
+   "quirk_applied": false,
+   "sense": false,
+   "fw": null,
+   "sw_build_id": null,
+   "has_onoff": true
+  },
+  {
+   "ieee": "0c:43:14:ff:fe:10:20:0c",
+   "nwk": 7372,
+   "manufacturer": "Example Sensors",
+   "model": "Door sensor",
+   "name": "Example Sensors Door sensor",
+   "user_given_name": "Front door sensor",
+   "area_id": "hallway",
+   "device_reg_id": "dev12",
+   "available": true,
+   "device_type": "EndDevice",
+   "power_source": "Battery or Unknown",
+   "lqi": 204,
+   "rssi": -57,
+   "last_seen": "2026-01-01T12:00:00",
+   "neighbors": [],
+   "quirk_applied": false,
+   "sense": false,
+   "fw": null,
+   "sw_build_id": null,
+   "has_onoff": false
+  },
+  {
+   "ieee": "0c:43:14:ff:fe:10:20:0d",
+   "nwk": 7645,
+   "manufacturer": "Example Sensors",
+   "model": "Smoke sensor",
+   "name": "Example Sensors Smoke sensor",
+   "user_given_name": "Smoke alarm",
+   "area_id": "hallway",
+   "device_reg_id": "dev13",
+   "available": true,
+   "device_type": "EndDevice",
+   "power_source": "Battery or Unknown",
+   "lqi": 117,
+   "rssi": -90,
+   "last_seen": "2026-01-01T12:00:00",
+   "neighbors": [],
+   "quirk_applied": false,
+   "sense": false,
+   "fw": null,
+   "sw_build_id": null,
+   "has_onoff": false
+  },
+  {
+   "ieee": "00:00:00:00:00:00:00:01",
+   "nwk": 0,
+   "manufacturer": "Example",
+   "model": "Coordinator stick",
+   "name": "Coordinator",
+   "user_given_name": null,
+   "area_id": null,
+   "device_reg_id": "dev00",
+   "available": true,
+   "device_type": "Coordinator",
+   "power_source": "Mains",
+   "lqi": 255,
+   "rssi": 0,
+   "last_seen": "2026-01-01T12:00:00",
+   "neighbors": []
+  }
+ ],
+ "areas": [
+  {
+   "area_id": "kitchen",
+   "name": "Kitchen"
+  },
+  {
+   "area_id": "hallway",
+   "name": "Hallway"
+  },
+  {
+   "area_id": "living_room",
+   "name": "Living room"
+  },
+  {
+   "area_id": "office",
+   "name": "Office"
+  },
+  {
+   "area_id": "garage",
+   "name": "Garage"
+  }
+ ],
+ "device_registry": [
+  {
+   "id": "dev01",
+   "sw_version": "0x1103339c",
+   "name_by_user": null,
+   "area_id": "kitchen"
+  },
+  {
+   "id": "dev02",
+   "sw_version": "0x1103339c",
+   "name_by_user": null,
+   "area_id": "kitchen"
+  },
+  {
+   "id": "dev03",
+   "sw_version": "0x1103339c",
+   "name_by_user": null,
+   "area_id": "hallway"
+  },
+  {
+   "id": "dev04",
+   "sw_version": "0x1103339c",
+   "name_by_user": null,
+   "area_id": "hallway"
+  },
+  {
+   "id": "dev05",
+   "sw_version": "0x1103339c",
+   "name_by_user": null,
+   "area_id": "living_room"
+  },
+  {
+   "id": "dev06",
+   "sw_version": "0x1103300a",
+   "name_by_user": null,
+   "area_id": "office"
+  },
+  {
+   "id": "dev07",
+   "sw_version": "0x1103339c",
+   "name_by_user": null,
+   "area_id": "garage"
+  },
+  {
+   "id": "dev08",
+   "sw_version": "0x00000040",
+   "name_by_user": null,
+   "area_id": "garage"
+  },
+  {
+   "id": "dev09",
+   "sw_version": "1.0.4",
+   "name_by_user": null,
+   "area_id": "kitchen"
+  },
+  {
+   "id": "dev10",
+   "sw_version": "1.0.4",
+   "name_by_user": null,
+   "area_id": "living_room"
+  },
+  {
+   "id": "dev11",
+   "sw_version": "2.3",
+   "name_by_user": null,
+   "area_id": "office"
+  },
+  {
+   "id": "dev12",
+   "sw_version": "7",
+   "name_by_user": null,
+   "area_id": "hallway"
+  },
+  {
+   "id": "dev13",
+   "sw_version": "3",
+   "name_by_user": null,
+   "area_id": "hallway"
+  }
+ ],
+ "state": {
+  "0c:43:14:ff:fe:10:20:01": {
+   "detect": 0,
+   "beacon_hz": 5,
+   "zone_state": 0,
+   "sources": "2212014699190146",
+   "link": {
+    "0x1222": {
+     "level": -75,
+     "rate": 94,
+     "s": 3,
+     "usable": true
+    },
+    "0x1999": {
+     "level": -73,
+     "rate": 94,
+     "s": 25,
+     "usable": true
+    }
+   },
+   "calibrated": [
+    4642,
+    6553
+   ],
+   "stack_used": 2860,
+   "beacons_skipped": 12
+  },
+  "0c:43:14:ff:fe:10:20:02": {
+   "detect": 0,
+   "beacon_hz": 5,
+   "zone_state": 0,
+   "sources": "1111014699190146",
+   "link": {
+    "0x1111": {
+     "level": -72,
+     "rate": 37,
+     "s": 18,
+     "usable": true
+    },
+    "0x1999": {
+     "level": -68,
+     "rate": 38,
+     "s": 34,
+     "usable": true
+    }
+   },
+   "calibrated": [],
+   "stack_used": 2860,
+   "beacons_skipped": 12
+  },
+  "0c:43:14:ff:fe:10:20:03": {
+   "detect": 0,
+   "beacon_hz": 5,
+   "zone_state": 0,
+   "sources": "44140146cc1c0146",
+   "link": {
+    "0x1444": {
+     "level": -64,
+     "rate": 91,
+     "s": 11,
+     "usable": true
+    },
+    "0x1ccc": {
+     "level": -58,
+     "rate": 94,
+     "s": 36,
+     "usable": true
+    }
+   },
+   "calibrated": [
+    5188,
+    7372
+   ],
+   "stack_used": 2860,
+   "beacons_skipped": 12
+  },
+  "0c:43:14:ff:fe:10:20:04": {
+   "detect": 0,
+   "beacon_hz": 5,
+   "zone_state": 0,
+   "sources": "3313014655150146aa1a0114",
+   "link": {
+    "0x1333": {
+     "level": -66,
+     "rate": 32,
+     "s": 35,
+     "usable": true
+    },
+    "0x1555": {
+     "level": -77,
+     "rate": 28,
+     "s": 36,
+     "usable": true
+    },
+    "0x1aaa": {
+     "level": -56,
+     "rate": 99,
+     "s": 13,
+     "usable": false
+    }
+   },
+   "calibrated": [
+    4915,
+    5461,
+    6826
+   ],
+   "stack_used": 2860,
+   "beacons_skipped": 12
+  },
+  "0c:43:14:ff:fe:10:20:05": {
+   "detect": 0,
+   "beacon_hz": 5,
+   "zone_state": 0,
+   "sources": "aa1a014644140146",
+   "link": {
+    "0x1aaa": {
+     "level": -79,
+     "rate": 60,
+     "s": 29,
+     "usable": true
+    },
+    "0x1444": {
+     "level": -73,
+     "rate": 78,
+     "s": 23,
+     "usable": true
+    }
+   },
+   "calibrated": [
+    6826,
+    5188
+   ],
+   "stack_used": 2860,
+   "beacons_skipped": 12
+  },
+  "0c:43:14:ff:fe:10:20:07": {
+   "detect": 0,
+   "beacon_hz": 5,
+   "zone_state": 0,
+   "sources": "",
+   "link": {},
+   "calibrated": [],
+   "stack_used": 2860,
+   "beacons_skipped": 12
+  }
+ }
+}
