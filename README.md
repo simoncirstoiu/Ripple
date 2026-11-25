@@ -2,6 +2,8 @@
 
 Motion detection from your existing Zigbee devices.
 
+[![Donate](https://img.shields.io/badge/Donate-PayPal-blue?logo=paypal)](https://www.paypal.com/donate/?hosted_button_id=V2QB62C54UTRU) [![Discord](https://img.shields.io/badge/Discord-Join-5865F2?logo=discord&logoColor=white)](https://discord.com/invite/CvhbwW79SH)
+
 https://github.com/user-attachments/assets/bd2e8076-61fb-47bc-91c2-4b365c0fa2b7
 
 Ripple turns mains powered Zigbee devices into room presence sensors.
@@ -465,6 +467,14 @@ These papers inspired it, and the ones we did not follow still helped us rule id
 - Chelloug, temperature and humidity effects on RSSI: <https://arxiv.org/abs/1501.01073>
 - Kim, Alexopoulos, Tsui, Wilson, "A Distribution-Free Tabular CUSUM Chart for Autocorrelated Data".
 - Human body shadowing and channel modelling at 2.4 GHz: <https://arxiv.org/abs/1509.08071>
+
+## Support
+
+Questions, test reports and ideas are welcome on [Discord](https://discord.com/invite/CvhbwW79SH).
+
+If you find Ripple useful, you can buy me a coffee:
+
+[![Donate with PayPal](https://img.shields.io/badge/Donate-PayPal-blue?logo=paypal)](https://www.paypal.com/donate/?hosted_button_id=V2QB62C54UTRU)
 
 ## Development
 
