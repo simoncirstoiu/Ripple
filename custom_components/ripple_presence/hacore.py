@@ -11,6 +11,7 @@ from homeassistant.helpers import area_registry as ar
 from homeassistant.helpers import device_registry as dr
 from homeassistant.helpers import entity_registry as er
 
+from .const import idents
 from . import quirk, v5
 
 _LOGGER = logging.getLogger(__name__)
@@ -47,7 +48,7 @@ def zha_registry_entries(hass):
     out = {}
     for d in _registry_entries(dr.async_get(hass)):
         owned = d.config_entry_id in zha_ids if hasattr(d, 'config_entry_id') else bool(zha_ids & set(d.config_entries))
-        for domain, ident in d.identifiers:
+        for domain, ident in idents(d):
             key = str(ident).lower()
             if domain == 'zha' and (owned or key not in out):
                 out[key] = d

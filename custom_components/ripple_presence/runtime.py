@@ -14,7 +14,7 @@ from homeassistant.helpers.debounce import Debouncer
 from homeassistant.helpers.dispatcher import async_dispatcher_send
 
 from .attrmap import V5_ADVANCED
-from .const import (CONF_ALLOW_WRITES, CONF_BASE_TOPIC, CONF_POLL, CONF_PROTECTED, CONF_RESYNC, CONF_STACK, DEFAULTS, DOMAIN,
+from .const import (CONF_ALLOW_WRITES, CONF_BASE_TOPIC, CONF_POLL, CONF_PROTECTED, CONF_RESYNC, CONF_STACK, DEFAULTS, DOMAIN, idents,
                     Z2M_BASE_DEFAULT,
                     SIGNAL_UPDATE)
 from . import quirk
@@ -53,7 +53,7 @@ def protected_ieees(hass, device_ids):
         for kind, value in (d.connections if d else ()):
             if kind == dr.CONNECTION_ZIGBEE:
                 out.append(value)
-        for dom, ident in (d.identifiers if d else ()):
+        for dom, ident in idents(d):
             if dom == 'mqtt' and str(ident).startswith('zigbee2mqtt_0x'):
                 out.append(from_z2m(str(ident)[12:]))
     return out
@@ -62,7 +62,7 @@ def protected_ieees(hass, device_ids):
 def ripple_only(d, entry_id):
     """True when every identifier of the device is Ripple's and only this entry owns it."""
     owner = {d.config_entry_id} if hasattr(d, 'config_entry_id') else set(d.config_entries)
-    return bool(d.identifiers) and all(dom == DOMAIN for dom, _ in d.identifiers) and owner == {entry_id}
+    return bool(d.identifiers) and all(t[0] == DOMAIN for t in d.identifiers) and owner == {entry_id}
 
 
 class RippleRuntime:
@@ -108,7 +108,7 @@ class RippleRuntime:
         for d in list(dr.async_entries_for_config_entry(reg, self.entry.entry_id)):
             if not ripple_only(d, self.entry.entry_id):
                 continue
-            zone = all(str(i).startswith('zone_') for _, i in d.identifiers)
+            zone = all(str(i).startswith('zone_') for _, i in idents(d))
             if zone or not er.async_entries_for_device(ents, d.id, include_disabled_entities=True):
                 reg.async_remove_device(d.id)
 
@@ -194,7 +194,7 @@ class RippleRuntime:
                 ents.async_remove(e.entity_id)
                 self.known_rooms.discard(rid)
         for d in list(dr.async_entries_for_config_entry(reg, self.entry.entry_id)):
-            rids = [i[5:] for dom, i in d.identifiers if dom == DOMAIN and str(i).startswith('room_')]
+            rids = [i[5:] for dom, i in idents(d) if dom == DOMAIN and str(i).startswith('room_')]
             if rids and ripple_only(d, self.entry.entry_id) and all(self._room_gone(r, live) for r in rids):
                 reg.async_remove_device(d.id)
                 self.known_rooms.difference_update(rids)

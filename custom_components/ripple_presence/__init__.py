@@ -11,7 +11,7 @@ from homeassistant.core import HomeAssistant
 from homeassistant.helpers import config_validation as cv
 
 from . import quirk
-from .const import DEFAULTS, DOMAIN, PANEL_URL, STATIC_URL, VERSION
+from .const import DEFAULTS, DOMAIN, PANEL_URL, STATIC_URL, VERSION, idents
 from .runtime import RippleRuntime, ripple_only
 from .websocket import async_register_commands
 
@@ -52,10 +52,10 @@ async def async_remove_config_entry_device(hass: HomeAssistant, entry: ConfigEnt
         return False
     rt = getattr(entry, 'runtime_data', None)
     if rt is None:
-        return all(str(i).startswith('zone_') for _, i in device.identifiers)
+        return all(str(i).startswith('zone_') for _, i in idents(device))
     live = {f'room_{r["id"]}' for r in rt.engine.rooms()}
     live |= {i for i, d in rt.engine.devices.items() if d.get('kind') == 'ripple'}
-    return not any(i in live for _, i in device.identifiers)
+    return not any(i in live for _, i in idents(device))
 
 
 async def async_unload_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:

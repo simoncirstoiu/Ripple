@@ -171,3 +171,16 @@ async def test_reports_reach_the_engine(hass, z2m):
     await hass.async_block_till_done()
     assert rt.engine.devices[ieee]['live']['zone_state'] == 1
     await hass.config_entries.async_unload(entry.entry_id)
+
+
+async def test_three_element_identifiers_dont_break_discovery(hass, z2m):
+    """#88: another integration registers a 3-element identifier; Ripple still finds the switches."""
+    from homeassistant.helpers import device_registry as dr
+    other = MockConfigEntry(domain='other')
+    other.add_to_hass(hass)
+    dr.async_get(hass).async_get_or_create(config_entry_id=other.entry_id, identifiers={('other', 'bridge', 'x')}, name='Odd')
+    entry, rt = await _setup(hass, z2m)
+    sense = {d['ieee'] for d in z2m.sim.fx['zha_devices'] if d.get('sense')}
+    assert {d['ieee'] for d in rt.engine.ripple_devices()} == sense
+    assert not rt.engine.status.get('error')
+    await hass.config_entries.async_unload(entry.entry_id)

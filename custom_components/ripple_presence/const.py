@@ -1,6 +1,6 @@
 """Constants for Ripple."""
 DOMAIN = 'ripple_presence'
-VERSION = '1.0.39'
+VERSION = '1.0.40'
 CONF_ALLOW_WRITES = 'allow_writes'
 CONF_PROTECTED = 'protected_devices'
 CONF_POLL = 'poll_interval_s'
@@ -26,3 +26,11 @@ TRIGGER_DEFAULT = 'any'
 TRIGGER_K_MAX = 100
 # the room's off_s is its own hold after the last device went off, not the devices' line hold
 ROOM_NUMBERS = [('off_s', 0, ROOM_OFF_MAX, 1, 's', 'box')] + SWITCH_NUMBERS[1:]
+
+
+def idents(d):
+    """(domain, id) of every identifier of a device entry. Some integrations register identifiers
+    with more than two elements, so they are never unpacked as pairs."""
+    for t in (d.identifiers if d else ()):
+        if len(t) >= 2:
+            yield t[0], t[1]

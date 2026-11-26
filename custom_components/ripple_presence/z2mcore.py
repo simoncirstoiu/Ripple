@@ -14,6 +14,7 @@ from homeassistant.helpers import area_registry as ar
 from homeassistant.helpers import device_registry as dr
 from homeassistant.helpers import entity_registry as er
 
+from .const import idents
 from . import v5
 from .hacore import CoreError, _update_entity, update_info
 
@@ -386,7 +387,7 @@ class Z2MCore:
     def _ha_device(self, ieee):
         ident = f'zigbee2mqtt_{to_z2m(ieee)}'
         return next((d for d in dr.async_get(self.hass).devices.values()
-                     if any(dom == 'mqtt' and i == ident for dom, i in d.identifiers)), None)
+                     if any(dom == 'mqtt' and i == ident for dom, i in idents(d))), None)
 
     def _devices(self):
         out = []
@@ -451,7 +452,7 @@ class Z2MCore:
         """IEEE of the Zigbee2MQTT device that owns an entity, or None."""
         ent = er.async_get(self.hass).async_get(entity_id)
         dev = dr.async_get(self.hass).async_get(ent.device_id) if ent and ent.device_id else None
-        for dom, i in (dev.identifiers if dev else ()):
+        for dom, i in idents(dev):
             if dom == 'mqtt' and str(i).startswith('zigbee2mqtt_0x'):
                 ieee = from_z2m(str(i)[12:])
                 return ieee if ieee in self._devs else None

@@ -231,6 +231,22 @@ async def test_switch_entities_join_the_zha_device(hass):
     assert not [d for d in ours if any(i[0] == 'zha' for i in d.identifiers)]
 
 
+async def test_three_element_identifiers_are_skipped(hass, hass_ws_client):
+    """#88: another integration registers a 3-element identifier; setup and the device lists still work."""
+    from homeassistant.helpers import device_registry as dr
+    other = MockConfigEntry(domain='other')
+    other.add_to_hass(hass)
+    dr.async_get(hass).async_get_or_create(config_entry_id=other.entry_id, identifiers={('other', 'bridge', 'x')}, name='Odd')
+    ieee = '0c:43:14:ff:fe:10:20:03'
+    dev_id, _ = _zha_device(hass, ieee, 'Hallway switch')
+    entry, rt = await _setup(hass)
+    client = await hass_ws_client(hass)
+    await client.send_json({'id': 1, 'type': 'ripple_presence/firmware/overview'})
+    assert (await client.receive_json())['success']
+    from custom_components.ripple_presence.hacore import zha_registry_entries
+    assert zha_registry_entries(hass)[ieee].id == dev_id
+
+
 async def test_zha_entry_is_the_one_owned_by_zha(hass):
     from homeassistant.helpers import device_registry as dr
     from custom_components.ripple_presence.hacore import zha_registry_entries
