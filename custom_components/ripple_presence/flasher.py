@@ -20,6 +20,7 @@ OTA_HDR = struct.Struct('<I5HIH32sI')
 SUB_HDR = struct.Struct('<HI')
 HEADER_STRING = b'Telink OTA Image'
 FILE_VERSION = 0xFFFFFFFF
+MAX_IMAGE_TYPE = 0xFFBF  # higher values are ZCL wildcards / security credentials
 BIN_RE = re.compile(r'^Ripple-v(\d+)\.(\d+)\.(\d+)\.bin$')
 FW_DIR = ('ripple', 'firmware')
 CACHE_SUBDIR = 'cache'
@@ -382,13 +383,16 @@ class Z2MFlasher(Flasher):
             _LOGGER.info('Ripple: reading the OTA ids of %s failed: %s', ieee, e)
             got = {}
         manuf, itype = got.get('manufacturerId'), got.get('imageTypeId')
-        if isinstance(manuf, int) and isinstance(itype, int):
+        # Some stock firmwares answer the wildcard 0xFFFF; Zigbee2MQTT refuses an image type above 0xFFBF.
+        if isinstance(manuf, int) and isinstance(itype, int) and 0 <= manuf < 0xFFFF and 0 <= itype <= MAX_IMAGE_TYPE:
             return SimpleNamespace(manufacturer_code=manuf, image_type=itype)
+        if got:
+            _LOGGER.info('Ripple: %s reports OTA ids %s / %s, not usable', ieee, manuf, itype)
         b = getattr(self, '_board', None) or {}
         if b.get('how') == 'stock' and isinstance(b.get('stock_manufacturer_id'), int) \
                 and isinstance(b.get('stock_image_type'), int):
             return SimpleNamespace(manufacturer_code=b['stock_manufacturer_id'], image_type=b['stock_image_type'])
-        raise FlashError('the device did not tell its OTA manufacturer code and image type')
+        raise FlashError('the device did not report a valid OTA manufacturer code and image type')
 
     async def _ota(self, ieee, data):
         try:

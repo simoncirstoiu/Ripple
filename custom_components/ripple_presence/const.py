@@ -1,6 +1,6 @@
 """Constants for Ripple."""
 DOMAIN = 'ripple_presence'
-VERSION = '1.0.40'
+VERSION = '1.0.41'
 CONF_ALLOW_WRITES = 'allow_writes'
 CONF_PROTECTED = 'protected_devices'
 CONF_POLL = 'poll_interval_s'

@@ -237,6 +237,30 @@ class Z2MFlasherTests(unittest.IsolatedAsyncioTestCase):
         with self.assertRaises(FlashError):
             await f._ask_query(IEEE)
 
+    async def test_query_ignores_wildcard_image_type(self):
+        core = FakeCore()
+        core.ota = {'manufacturerId': 4417, 'imageTypeId': 0xFFFF}
+        f, _ = make(core)
+        f._board = BOARD
+        q = await f._ask_query(IEEE)
+        self.assertEqual((q.manufacturer_code, q.image_type), (4417, 54179))
+
+    async def test_query_wildcard_without_stock_ids_fails(self):
+        core = FakeCore()
+        core.ota = {'manufacturerId': 0xFFFF, 'imageTypeId': 54179}
+        f, _ = make(core)
+        f._board = {**BOARD, 'how': 'flashed'}
+        with self.assertRaises(FlashError):
+            await f._ask_query(IEEE)
+
+    async def test_wildcard_device_installs_with_table_ids(self):
+        core = FakeCore()
+        core.ota = {'manufacturerId': 4417, 'imageTypeId': 0xFFFF}
+        f, files = make(core)
+        await f._install(IEEE, BOARD)
+        self.assertEqual(files.asked, (4417, 54179))
+        self.assertIn('ota', [c[0] for c in core.calls])
+
     async def test_query_prefers_the_device(self):
         core = FakeCore()
         core.ota = {'manufacturerId': 0x1141, 'imageTypeId': 47149}
